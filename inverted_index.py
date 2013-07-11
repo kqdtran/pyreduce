@@ -3,19 +3,22 @@ import sys
 
 """
 Inverted Index using Simple Python MapReduce Framework
+
+Test Input: books.json
+Test Output: inverted_index.json
 """
 
 mr = MapReduce.MapReduce()
 
 def mapper(record):
     # record is a 2-element list
-    # key: document identifier 
-    # value: document contents with all the words
-    key = record[0]
-    value = record[1]
-    words = value.split()
+    # key: a word  
+    # value: a document that the word appears in
+    id = record[0]
+    content = record[1]
+    words = content.split()
     for w in words:
-      mr.emit_intermediate(w, key)
+      mr.emit_intermediate(w, id)
 
 def reducer(key, list_of_values):
     # key: a document word

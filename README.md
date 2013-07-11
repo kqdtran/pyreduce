@@ -2,7 +2,7 @@ A simple MapReduce framework from Coursera's [Introduction to Data Science](http
 
 While it implements the gist of the MapReduce model, this framework only executes on a single machine.   
 
-Inside data/ is a bunch of test data, and inside solution/ is the expected output 
+Inside ``data/`` is a bunch of test data, and inside ``solution/`` is the expected output 
 
 Run    
 
@@ -14,4 +14,4 @@ to test the word count example.
 
 to execute the SQL relation join example. Expected output can be verified against ``join.json``    
 
-... and so on
+... and so on. 
